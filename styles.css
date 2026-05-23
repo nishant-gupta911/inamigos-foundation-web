@@ -68,3 +68,61 @@ a {
 main {
   padding: 40px;
 }
+
+section {
+  padding: 60px 40px;
+}
+
+.fold {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.leadtype h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.dateline {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+  color: #666;
+}
+
+.brief {
+  font-size: 1.1rem;
+  color: #4A4A4A;
+  margin: 20px 0;
+}
+
+.inklinks {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.inklinks a {
+  padding: 12px 24px;
+  border: 2px solid #181210;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.figures {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.figures span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
