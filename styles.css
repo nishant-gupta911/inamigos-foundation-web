@@ -168,3 +168,54 @@ section {
   font-weight: bold;
   color: #B8952A;
 }
+
+.dispatch {
+  position: relative;
+}
+
+.watermark {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 8rem;
+  font-weight: bold;
+  opacity: 0.05;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #B8952A;
+  margin: 0 0 10px;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin: 20px 0 40px;
+}
+
+.broadsheet {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.parcel {
+  border-left: 4px solid #C0392B;
+  padding-left: 20px;
+}
+
+.signal {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #C0392B;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.parcel h3 {
+  margin: 10px 0 15px;
+  font-size: 1.5rem;
+}
