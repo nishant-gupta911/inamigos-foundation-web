@@ -1,17 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,900;1,500;1,700&family=Karla:ital,wght@0,400;0,600;0,800;1,400&family=Yeseva+One&display=swap");
+
+:root {
+  --parchment: #F7F2EB;
+  --coal: #181210;
+  --vermillion: #C0392B;
+  --aged-gold: #B8952A;
+  --slate: #4A4A4A;
+  --warm-paper: #F0EBE1;
+  --faded-ink: rgba(24, 18, 16, 0.68);
+  --chalk: rgba(247, 242, 235, 0.86);
+  --rule: 4px solid var(--coal);
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  background: #F7F2EB;
-  color: #181210;
+  background: var(--parchment);
+  color: var(--coal);
 }
 
 body {
   margin: 0;
-  font-family: Georgia, serif;
+  font-family: "Karla", Georgia, serif;
   font-size: 16px;
   line-height: 1.8;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(184, 149, 42, 0.08), transparent 22rem),
+    linear-gradient(90deg, rgba(24, 18, 16, 0.035) 1px, transparent 1px),
+    var(--parchment);
+  background-size: auto, 96px 96px, auto;
 }
 
 a {
@@ -38,10 +57,16 @@ a {
 
 .nameplate {
   display: block;
-  font-size: 4rem;
-  text-align: center;
-  margin: 12px 0 0;
+  font-family: "Yeseva One", "Cormorant Garamond", serif;
+  font-size: clamp(3.3rem, 8vw, 5.5rem);
   line-height: 0.92;
+  text-align: center;
+  letter-spacing: 0;
+  margin: 12px 0 0;
+}
+
+.masthead.tight .nameplate {
+  font-size: clamp(2rem, 4.2vw, 3.1rem);
 }
 
 .motto {
@@ -50,7 +75,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.32em;
   font-size: 0.78rem;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .navstrip {
@@ -62,7 +87,7 @@ a {
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 main {
@@ -128,8 +153,8 @@ section {
 }
 
 .night {
-  background: #181210;
-  color: #F7F2EB;
+  background: var(--coal);
+  color: var(--chalk);
 }
 
 .testimony {
@@ -137,15 +162,25 @@ section {
 }
 
 .quote {
-  font-size: 1.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
   font-style: italic;
   font-weight: 500;
   margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.testimony p {
+  color: var(--faded-ink);
+}
+
+.night .testimony p {
+  color: var(--chalk);
 }
 
 .silverline {
-  height: 2px;
-  background: #B8952A;
+  height: 3px;
+  background: var(--aged-gold);
   margin: 40px 0;
 }
 
@@ -158,15 +193,16 @@ section {
 
 .stamp {
   padding: 15px 20px;
-  border: 2px solid #B8952A;
+  border: 2px solid var(--aged-gold);
   display: flex;
   align-items: center;
   gap: 10px;
+  font-weight: 600;
 }
 
 .stamp span {
   font-weight: bold;
-  color: #B8952A;
+  color: var(--aged-gold);
 }
 
 .dispatch {
@@ -186,7 +222,7 @@ section {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #B8952A;
+  color: var(--aged-gold);
   margin: 0 0 10px;
 }
 
@@ -202,7 +238,7 @@ section {
 }
 
 .parcel {
-  border-left: 4px solid #C0392B;
+  border-left: 4px solid var(--vermillion);
   padding-left: 20px;
 }
 
@@ -210,7 +246,7 @@ section {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #C0392B;
+  color: var(--vermillion);
   font-weight: bold;
   margin: 0 0 10px;
 }
