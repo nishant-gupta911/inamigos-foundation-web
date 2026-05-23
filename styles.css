@@ -126,3 +126,45 @@ section {
   text-align: center;
   padding: 20px;
 }
+
+.night {
+  background: #181210;
+  color: #F7F2EB;
+}
+
+.testimony {
+  max-width: 800px;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.silverline {
+  height: 2px;
+  background: #B8952A;
+  margin: 40px 0;
+}
+
+.stampdesk {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.stamp {
+  padding: 15px 20px;
+  border: 2px solid #B8952A;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stamp span {
+  font-weight: bold;
+  color: #B8952A;
+}
