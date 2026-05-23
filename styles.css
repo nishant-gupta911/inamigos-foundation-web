@@ -38,6 +38,13 @@ a {
   text-decoration: none;
 }
 
+/* Focus and accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--aged-gold);
+  outline-offset: 2px;
+}
+
 .masthead {
   position: sticky;
   top: 0;
@@ -97,6 +104,26 @@ a {
   font-weight: 800;
 }
 
+.navstrip a {
+  position: relative;
+  transition: color 200ms ease;
+}
+
+.navstrip a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--vermillion);
+  transition: width 200ms ease;
+}
+
+.navstrip a:hover::after {
+  width: 100%;
+}
+
 main {
   padding: 40px;
 }
@@ -116,6 +143,17 @@ section {
   font-size: 3.2rem;
   line-height: 1.2;
   margin: 20px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 900;
+}
+
+.leadtype h1 span {
+  display: block;
+}
+
+.leadtype h1 strong {
+  font-weight: 900;
+  color: var(--vermillion);
 }
 
 .dateline {
@@ -123,7 +161,8 @@ section {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin: 0;
-  color: #666;
+  color: var(--slate);
+  font-weight: 600;
 }
 
 .brief {
@@ -254,6 +293,29 @@ section {
 .parcel {
   border-left: 4px solid var(--vermillion);
   padding-left: 20px;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.parcel:hover {
+  transform: translateY(-2px);
+}
+
+.parcel h3 {
+  margin: 10px 0 15px;
+  font-size: 1.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
+
+.parcel p {
+  color: var(--slate);
+  margin: 10px 0;
+}
+
+.parcel strong {
+  color: var(--vermillion);
+  display: block;
+  margin-top: 15px;
 }
 
 .signal {
@@ -263,11 +325,8 @@ section {
   color: var(--vermillion);
   font-weight: bold;
   margin: 0 0 10px;
-}
-
-.parcel h3 {
-  margin: 10px 0 15px;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 /* Responsive Design */
